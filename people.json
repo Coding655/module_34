@@ -1,0 +1,17 @@
+{
+    "data": "satarday, 06 april 2024",
+    "people": [
+        {
+            "name": "imran sirajee",
+            "occupation": "web developer",
+            "age": 29,
+            "country": "bangladesh"
+        },
+        {
+            "name": "ruhul kadir",
+            "occupation": "web developer",
+            "age": 31,
+            "country": "bangladesh"
+        }
+    ]
+}

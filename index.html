@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.3/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Phone Hunter API</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="text-5xl text-center mb-8 text-sky-400">Hunting Phone</h1>
+    </header>
+
+    <main class="container mx-auto mt-8">
+      <section class="m-4 p-4 bg-gray-100">
+        <input
+          id="search-field"
+          type="text"
+          placeholder="Search...."
+          class="input input-bordered input-accent w-full max-w-xs"
+        />
+        <button onclick="searchButton()" class="btn btn-accent text-white">
+          Search
+        </button>
+
+        <!-- another button -->
+        <!-- <input type="text" id="searchBtn2" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+            <button onclick="handleSearch2()"  class="btn btn-active btn-neutral">search here</button> -->
+      </section>
+      <!-- Loading spinner -->
+      <section>
+        <div id="loading-spinner" class="text-center my-40 hidden">
+          <span class="loading loading-spinner text-info"></span>
+        </div>
+      </section>
+
+      <section>
+        <div
+          id="phone-container"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          <!-- 1st card  previous-->
+          <!-- <div class="card w-96 bg-gray-200 shadow-xl">
+                    <figure><img src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-mini.jpg" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title">Shoes!</h2>
+                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                      <div class="card-actions  justify-end">
+                        <button class="btn btn-primary">Buy Now</button>
+                      </div>
+                    </div>
+                  </div> -->
+        </div>
+
+        <div id="show-all-container" class="hidden text-center my-20">
+          <button onclick="showAllBtn()" class="btn btn-error">
+            see more >
+          </button>
+        </div>
+      </section>
+      <!-- show details modal -->
+      <!-- Open the modal using ID.showModal() method -->
+     
+      <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+          <h3 id="show-phone-details" class="font-bold text-3xl">!</h3>
+          <div id="show-details-container">
+            
+          </div>
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+    </main>
+
+    <footer></footer>
+
+    <script src="js/index.js"></script>
+    <script src="P.JS"></script>
+  </body>
+</html>
