@@ -11,21 +11,24 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>phones hunter</title>
   </head>
-  <body class="bg-pink-100">
+  <body >
     <main>
       <!-- input search  -->
-      <section class=" flex justify-center p-4">
-        <h1 class="text-4xl font-bold text-gray-300 mr-10">PHONE HUNTING</h1>
-        <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
-        <button class="btn btn-accent font-bold text-white">Accent</button>
+      <section class=" grid-row: auto text-center  p-4 bg-gray-100">
+        <h1 class="text-4xl font-bold text-gray-300 mb-4 mr-6 ">PHONE HUNTING</h1>
+        <input id="searchHandle" type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+        <button  onclick="searchHandle()" class="btn btn-accent font-bold text-white">Accent</button>
         
       </section>
       <!-- loading spinner -->
       <section>
-
+        <div  class="text-center my-8">
+          <span id="spinner" class="loading loading-spinner text-blue-500 loading-md hidden"></span>
+        </div>
       </section>
       <!-- phone card -->
-      <section class="mt-5">
+      <section class="mt-5 bg-pink-100" >
+
         <div id="divContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4  ">
 
           <!-- <div class="card w-96 bg-base-100 shadow-xl">
@@ -42,8 +45,31 @@
           </div> -->
 
         </div>
+
+          <!-- show more -->
+          <div id="show-details" class="text-center my-14 hidden">
+            <button onclick="showDetails()" class="btn glass font-bold text-gray-400 ">Show More..</button>
+          </div>
       </section>
     </main>
     <script src="js/index.js"></script>
   </body>
 </html>
+
+
+
+
+
+
+<!-- 
+  steps:
+  1.make a input and a search button
+  2. make some card to add phone details 
+  3.fetch
+  4.display
+  5.loading spinner
+  6.show all
+  
+
+
+-->
